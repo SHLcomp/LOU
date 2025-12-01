@@ -333,7 +333,7 @@ body {
             font-size: clamp(10px, 15px, 30px);
             background: transparent;
             backdrop-filter: blur(0px);
-            font-size: x-small; // was smaller
+            font-size: smaller; // was smaller
 
             .desc {
                 flex-direction: column;
