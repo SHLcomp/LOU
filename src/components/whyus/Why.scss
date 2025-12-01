@@ -175,6 +175,67 @@
     }
 }
 
+@media (max-width: 1024px) and (min-width: 601px) {
+    .why {
+        flex-direction: column;
+        gap: 3rem;
+        padding: 2rem;
+
+        .right {
+            width: 100%;
+            text-align: center;
+
+            .txt {
+                text-align: center;
+                gap: 30px;
+
+                padding-right: 0px;
+
+                .info {
+                    justify-content: center;
+
+                    .info-item {
+                        flex: 1 1 100%;
+                        height: clamp(150px, 25vw, 300px);
+
+                    }
+                }
+            }
+
+            .why-us {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+
+        .left {
+            width: 100%;
+            margin-top: 2rem;
+
+            .img-cont {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+
+                &::after {
+                    font-size: 1rem;
+                    bottom: 5%;
+                    right: 50%;
+                    transform: translateX(50%);
+                }
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
 @media (max-width:600px) {
     .why {
         flex-direction: column;
@@ -227,62 +288,3 @@
     }
 }
 
-@media (max-width: 1024px) and (min-width: 601px) {
-    .why {
-        flex-direction: column;
-        gap: 3rem;
-        padding: 2rem;
-
-        .right {
-            width: 100%;
-            text-align: center;
-
-            .txt {
-                text-align: center;
-                gap: 30px;
-
-                padding-right: 0px;
-
-                .info {
-                    justify-content: center;
-
-                    .info-item {
-                        flex: 1 1 100%;
-                        height: clamp(150px, 20vw, 200px);
-
-                    }
-                }
-            }
-
-            .why-us {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 20px;
-            }
-        }
-
-        .left {
-            width: 100%;
-            margin-top: 2rem;
-
-            .img-cont {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-
-                &::after {
-                    font-size: 1rem;
-                    bottom: 5%;
-                    right: 50%;
-                    transform: translateX(50%);
-                }
-
-                img {
-                    max-width: 100%;
-                }
-            }
-        }
-    }
-}
