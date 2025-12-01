@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "./projects.scss";
+import "./Projects.scss";
 import data from "../../data/services";
 import { SassColor } from "sass";
 
