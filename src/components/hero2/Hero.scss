@@ -329,11 +329,11 @@ body {
             width: 100%;
             flex-direction: column-reverse;
             gap: 20px;
-            top: clamp(15vh, 1em + 1vh, 55vh) !important;
+            top: clamp(15vh, 1em + 1vh, 55vh) !important; //was 18em + 1vh
             font-size: clamp(10px, 15px, 30px);
             background: transparent;
             backdrop-filter: blur(0px);
-            font-size: smaller;
+            font-size: x-small; // was smaller
 
             .desc {
                 flex-direction: column;
