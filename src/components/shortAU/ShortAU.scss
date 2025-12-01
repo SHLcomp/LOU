@@ -51,6 +51,7 @@
                 font-family: 'exbed';
                 display: flex;
                 flex-direction: column;
+
                 &.pop {
                     animation-name: header;
                     animation-duration: 2s;
@@ -122,38 +123,24 @@
 
 /* Mobile */
 @media (max-width: 600px) {
-    .shortau .container {
-        flex-direction: column;
-        align-items: center;
-        gap: 2em;
-        padding-inline: 1em;
+    .shortau {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            gap: 2em;
+            padding-inline: 1em;
 
-        .img {
-            width: 100%;
-
-            img {
+            .img {
                 width: 100%;
-            }
-        }
 
-        .cards {
-            width: 100%;
-            grid-template-columns: 1fr;
-            gap: 1em;
-
-            .card {
-                width: 100%;
-                height: clamp(250px, 45vh, 350px);
-                /* fixed height */
-                pointer-events: none;
-
-                .card-text {
-                    justify-content: center;
-                    //   align-items: center;
-                    padding: 0;
-                    height: 100%;
+                img {
+                    width: 100%;
                 }
             }
+            .text{
+                width: 100%;
+            }
+
         }
     }
 }
