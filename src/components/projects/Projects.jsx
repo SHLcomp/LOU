@@ -6,7 +6,7 @@ import { SassColor } from "sass";
 export const Projects = () => {
   const itemsRef = useRef([]);
   const headerRef = useRef(null); // <- h1 ref
-  const subheaderRef = useRef(null); 
+  const subheaderRef = useRef(null);
 
   itemsRef.current.length = data.length;
 
@@ -41,7 +41,12 @@ export const Projects = () => {
         <span className="secondary-text">LOU Featured Projects</span>
         Our Projects
       </h1>
-      <p className="des-text" ref={subheaderRef}>LOU Case Studies</p>
+      <p className="des-text" ref={subheaderRef}>
+        LOU Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
+        ducimus iste voluptates ex eius asperiores tenetur alias, accusamus
+        vitae ea? Natus ex suscipit delectus numquam maiores. Dolores placeat a
+        ipsa.
+      </p>
 
       <div className="cards">
         {data.map((project, i) => (

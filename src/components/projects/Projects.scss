@@ -160,15 +160,21 @@
 
 /* Mobile */
 @media (max-width: 600px) {
-    .projects .cards {
-        grid-template-columns: 1fr;
-        padding-inline: 10px;
-
-        .card {
+    .projects {
+        p{
             width: 100%;
-            height: auto;
-            justify-content: space-between;
-            gap: 1em;
+            padding-inline: 10px;
+        }
+        .cards {
+            grid-template-columns: 1fr;
+            padding-inline: 10px;
+
+            .card {
+                width: 100%;
+                height: auto;
+                justify-content: space-between;
+                gap: 1em;
+            }
         }
     }
 }
