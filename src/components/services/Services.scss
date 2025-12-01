@@ -1,0 +1,277 @@
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+    margin-top: 6em;
+    padding-block: 2em;
+    gap: 10px;
+    background: var(--secondary-bg-color);
+
+    h1 {
+        font-family: "exbed";
+        transform: translateY(40px);
+        opacity: 0.01;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 5px;
+
+        &.pop {
+            animation: header 2s forwards;
+            // animation: title 3s forwards;
+        }
+    }
+
+    p {
+        width: 100%;
+        &.pop {
+            animation: header 2s forwards;
+        }
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 2em;
+
+        // align-items: center;
+        .img {
+            width: 40%;
+            height: 40%;
+            display: flex;
+            justify-content: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100%;
+                border-radius: 20px;
+                // border-radius: 50%;
+                transform: scale(0.3);
+                opacity: .3;
+
+                &.pop {
+                    animation-name: zoomImage;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+            }
+        }
+
+
+        .cards {
+            display: grid;
+            width: 55%;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+            // padding-inline: 30px;
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                // margin-left: 100%;
+                // width: clamp(90px, 15vw, 200px); //my version
+                width: 100%;
+                height: clamp(250px, 30vh, 350px);
+                box-shadow: 3px 4px 6px 3px var(--silver-glow);
+                transition: 0.5s ease;
+                justify-content: flex-start;
+                border-radius: 20px;
+                overflow: hidden;
+                position: relative;
+                background: white;
+                opacity: 0;
+                // transform: translateX(-60px); //my version
+                transform: translateY(60px);
+
+                &.pop {
+                    animation: cards 1s forwards;
+                }
+
+                &:hover {
+                    box-shadow: 3px 4px 12px 3px var(--golden-glow);
+                }
+
+                &:hover img {
+                    transform: scale(1.1);
+
+                }
+
+                &:hover .card-img {
+                    aspect-ratio: 10/1 !important; //this is not working even if I commented all the block out????
+                    transition: 1s ease;
+                }
+
+                &:hover .card-text h5 {
+                    display: block !important;
+                }
+
+                &:hover .card-text p {
+                    display: block !important;
+                }
+
+                &:hover .card-img::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: var(--image-highlight);
+                    pointer-events: none;
+                    opacity: 5%;
+                }
+
+                .card-img {
+                    position: relative;
+                    width: 100% !important;
+                    aspect-ratio: 13/10;
+                    overflow: hidden;
+                    transition: 1s ease;
+                    transition: aspect-ratio 1s ease;
+
+                    flex-shrink: 0;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: 0.5s;
+                    }
+                }
+
+                .card-text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 5px;
+
+                    h3 {
+                        padding-top: .5em;
+                        font-family: 'exbed';
+                        text-align: center;
+                        font-size: 15px;
+                    }
+
+                    p {
+                        font-size: 15px;
+                        padding-bottom: 20px;
+                        padding-inline: 20px;
+                        display: none;
+                        transition: .3s ease;
+                    }
+
+                    h5 {
+                        margin-bottom: 2em;
+                        display: none;
+                        transition: .3s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Animations */
+@keyframes header {
+    from {
+        transform: translateY(40px);
+        opacity: 0.01;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes cards {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomImage {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .services .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        padding-inline: 1.5em;
+
+        .img {
+            width: 80%;
+
+            img {
+                width: 100%;
+                transform: scale(0.4);
+            }
+        }
+
+        .cards {
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1em;
+
+            .card {
+                height: clamp(250px, 43vh, 450px);
+                /* fixed height */
+            }
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .services .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        padding-inline: 1em;
+
+        .img {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .cards {
+            width: 100%;
+            grid-template-columns: 1fr;
+            gap: 1em;
+
+            .card {
+                width: 100%;
+                height: clamp(250px, 45vh, 350px);
+                /* fixed height */
+                pointer-events: none;
+
+                .card-text {
+                    justify-content: center;
+                    //   align-items: center;
+                    padding: 0;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

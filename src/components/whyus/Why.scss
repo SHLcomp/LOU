@@ -1,0 +1,288 @@
+.why {
+    display: flex !important;
+    flex-direction: row;
+    padding-block: 2cm;
+    margin-top: 1cm;
+    // background: var(--secondary-bg-color);
+
+    .right {
+        width: 50%;
+        padding: 10px;
+        padding-left: 3em;
+        transform: translateX(-160px);
+        opacity: .3;
+        &.pop{
+            animation-name: rightScale;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        .txt {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-right: 30px;
+
+            h1 {
+                font-family: 'exbed';
+            }
+
+            .info {
+                display: flex;
+                justify-content: space-around;
+                gap: 10px;
+
+                .info-item {
+                    background: white;
+                    box-shadow: 3px 4px 6px 3px rgba(0, 0, 0, 0.1);
+                    padding-inline: 10px;
+                    padding-block: 2em;
+                    width: clamp(60px, 40vw, 700px);
+                    height: clamp(20px, 15vw, 300px);
+
+                    i {
+                        color: var(--icons);
+                    }
+
+                    h4 {
+                        color: var(--text);
+                        font-family: 'exbed';
+                    }
+                }
+
+            }
+        }
+
+        .why-us {
+            margin-top: 2rem;
+
+            h2 {
+                font-family: 'exbed';
+                padding-bottom: 1em;
+            }
+
+            ul {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); // 2 equal columns
+                gap: 10px 0px; // row-gap and column-gap
+                list-style: none;
+                justify-content: flex-start;
+                align-items: start;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    font-size: 1rem;
+
+                    &::before {
+                        content: "✔";
+                        color: #0fb36a;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .left {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .img-cont {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            position: relative;
+
+            // Floating badge
+            &::after {
+                content: "100% satisfaction";
+                position: absolute;
+                bottom: 10%;
+                left: -20px;
+                background: #fff;
+                color: #e63946;
+                font-size: 1.2rem;
+                font-weight: 700;
+                padding: 10px 20px;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                white-space: nowrap;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 280px;
+                border-radius: 16px;
+                object-fit: cover;
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+                transform: scale(.3);
+
+                &.move-up {
+                    transform: scale(.3);
+                    &.pop {
+                    transform: translateY(-25px);
+                    animation-name: imagePop;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards; //this prevents .move-up/down class, I will fix it later
+                }
+                }
+
+                &.move-down {
+                    transform: scale(.3);
+                    &.pop {
+                    animation-name: imagePop;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                    transform: translateY(25px); //this prevents .move-up/down class, I will fix it later
+                }
+                }
+                &.pop {
+                    animation-name: imagePop;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards; //this prevents .move-up/down class, I will fix it later
+                }
+                
+            }
+        }
+    }
+}
+
+@keyframes imagePop {
+    from {
+        transform: scale(.3);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes rightScale {
+    from{
+        transform: translateX(-160px);
+        opacity: .3;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@media (max-width:600px) {
+    .why {
+        flex-direction: column;
+        gap: 5rem;
+
+        .right {
+            width: 100%;
+            gap: 4cm;
+            padding-inline: 20px;
+
+            .txt {
+                gap: 2rem;
+
+                padding-right: 0px;
+
+                .info {
+                    flex-direction: column;
+
+                    .info-item {
+                        width: 100%;
+                        height: clamp(160px, 10vh, 30vh);
+                        padding-block: 10px;
+                    }
+                }
+            }
+
+        }
+
+        .left {
+            width: 100%;
+            margin-top: 1.5rem;
+            padding-inline: 10px;
+
+            .img-cont {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+
+                &::after {
+                    font-size: 1rem;
+                    bottom: 5%;
+                    right: 50%;
+                    transform: translateX(50%);
+                }
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 601px) {
+    .why {
+        flex-direction: column;
+        gap: 3rem;
+        padding: 2rem;
+
+        .right {
+            width: 100%;
+            text-align: center;
+
+            .txt {
+                text-align: center;
+                gap: 30px;
+
+                padding-right: 0px;
+
+                .info {
+                    justify-content: center;
+
+                    .info-item {
+                        flex: 1 1 100%;
+                        height: clamp(150px, 20vw, 200px);
+
+                    }
+                }
+            }
+
+            .why-us {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+
+        .left {
+            width: 100%;
+            margin-top: 2rem;
+
+            .img-cont {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+
+                &::after {
+                    font-size: 1rem;
+                    bottom: 5%;
+                    right: 50%;
+                    transform: translateX(50%);
+                }
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

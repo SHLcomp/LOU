@@ -1,0 +1,434 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero {
+    position: relative;
+    width: 100vw;
+    /* full viewport width */
+    height: 100vh;
+    /* full viewport height */
+    overflow: hidden;
+    color: var(--text);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-image: url("https://cdn.pixabay.com/photo/2017/03/27/14/31/stars-2179083_1280.jpg");
+
+    // background-repeat: no-repeat;
+    .hero-imgs {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        .globe {
+            position: absolute;
+            top: 50%;
+            right: 0%;
+            transform: translateY(-50%);
+            z-index: 5;
+            width: 60%;
+            pointer-events: none;
+            filter: drop-shadow(0 0 25px rgba(255, 215, 150, 0.3));
+            pointer-events: none;
+            animation: float 14s linear infinite;
+            opacity: .7;
+            translate: 40vh -40vh;
+
+            animation-name: globe;
+            animation-duration: 100s;
+            /* one full cycle lasts 60 seconds */
+            animation-iteration-count: infinite;
+            /* loops forever */
+            animation-timing-function: ease-in-out;
+            /* smooth motion */
+            animation-direction: alternate;
+        }
+    }
+
+    .hero-text {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: start;
+        justify-content: flex-end !important;
+        text-align: start;
+        width: 100% !important;
+        top: clamp(10vh, 30%, 50%) !important;
+        padding-block: 30px;
+        filter: drop-shadow(1px 1px 2px var(--golden-glow));
+        padding-left: 10vw;
+
+        .desc {
+            opacity: 0;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-between;
+            gap: 2em;
+
+            &.pop {
+                animation: headerDes 3s forwards ease-out;
+            }
+
+            p {
+                font-size: 1.2em;
+                color: white;
+            }
+
+            .hero-cta {
+                display: flex;
+                gap: 2em;
+                width: 70%;
+                font-size: 12px;
+
+                .cta:nth-child(1) {
+                    background: transparent;
+                    border: solid 1px gray;
+                    color: var(--text2);
+                    filter: drop-shadow(0px 0px 0px black);
+                    box-shadow: (1px 1px 2px var(--golden-glow));
+                }
+            }
+        }
+
+        .hero-title {
+            font-family: 'exbed';
+            filter: drop-shadow(3px 2px 1px var(--golden-glow));
+
+            h1 {
+                font-size: 3em;
+                width: 80%;
+                animation-name: title;
+                animation-duration: 5s;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+
+    .contact-orb {
+        position: absolute;
+        right: 4vw;
+        bottom: 10vh;
+        z-index: 999;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: .5s ease-in-out;
+
+        &:hover ul {
+            opacity: 1;
+        }
+        &:hover{
+            transform: translateY(-120%);
+        }
+
+        ul {
+            display: flex;
+            opacity: 0;
+            color: var(--text);
+            background: var(--second-color);
+            position: absolute;
+            transition: .5s ease-in-out;
+            position: relative;
+            top: 8%;
+            height: clamp(100px, 12vh, 200px);
+            width: clamp(100px, 12vw, 200px);
+            list-style: none;
+            flex-direction: column;
+        }
+
+    }
+    .contact-orb {
+  position: absolute;
+  right: 4vw;
+  bottom: 10vh;
+  z-index: 999;
+
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: 0.6s cubic-bezier(.2,.8,.2,1);
+
+  /* Glass / cosmic vibe */
+  backdrop-filter: blur(8px);
+  box-shadow:
+    0 0 15px rgba(255, 215, 150, 0.3),
+    inset 0 0 12px rgba(255, 255, 255, 0.25);
+
+  animation: orbFloat 6s ease-in-out infinite;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    background: linear-gradient(
+      45deg,
+      #f5d58a,
+      #e6b65c,
+      #ffffff,
+      #f5d58a
+    );
+    opacity: 0.5;
+    z-index: -1;
+    filter: blur(6px);
+  }
+
+  &:hover {
+    transform: translateY(-140%) scale(1.2);
+    box-shadow:
+      0 0 30px rgba(255, 225, 180, 0.6),
+      inset 0 0 25px rgba(255, 255, 255, 0.35);
+  }
+
+  &:hover ul {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  ul {
+    position: absolute;
+    bottom: 130%;
+    right: 50%;
+    transform: translateX(50%) translateY(15px);
+    opacity: 0;
+    pointer-events: none;
+    background: rgba(15, 15, 15, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 14px;
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    padding-inline: 20px !important;
+    min-width: 210px;
+    min-height: 110px;
+    box-shadow: 0 0 20px rgba(255, 215, 150, 0.15);
+    transition: 0.5s ease;
+
+    li {
+      font-size: 0.85em;
+      white-space: nowrap;
+      color: var(--text2);
+      
+
+      i {
+        margin-right: 8px;
+        color: var(--golden-glow);
+      }
+    }
+  }
+}
+
+}
+
+
+
+
+
+
+@keyframes orbFloat {
+  0% { transform: translateY(0) }
+  50% { transform: translateY(-8px) }
+  100% { transform: translateY(0) }
+}
+
+@keyframes globe {
+    to {
+        translate: 0vh -0vh;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes title {
+    from {}
+
+    to {
+        word-spacing: 3px;
+        letter-spacing: 2px;
+    }
+}
+
+@keyframes headerDes {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@media (max-width:600px) {
+    .hero {
+        width: 100%;
+        .globe {
+            translate: 10vh 8vh !important;
+            animation-duration: 30s;
+        }
+
+        .hero-img {
+            width: 100%;
+            padding-inline: 0em;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: white;
+                opacity: 15%;
+            }
+
+            img {
+                width: 95%;
+                object-fit: cover;
+            }
+        }
+
+        .hero-text {
+            width: 100%;
+            flex-direction: column-reverse;
+            gap: 20px;
+            top: clamp(15vh, 18em + 1vh, 55vh);
+            font-size: clamp(10px, 15px, 30px);
+            background: transparent;
+            backdrop-filter: blur(0px);
+            font-size: smaller;
+
+            .desc {
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 20px;
+
+                p {
+                    color: white;
+                    filter: drop-shadow(1px 1px 2px black);
+                }
+
+                .hero-cta {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+/* TABLET BREAKPOINT — iPads, Samsung Tabs, etc. */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .hero {
+        width: 100%;
+
+        .hero-img {
+            width: 100%;
+            padding-inline: 2em;
+            /* smaller padding than desktop */
+
+            img {
+                width: 100%;
+                height: 32em;
+                /* reduce height slightly */
+                object-fit: cover;
+            }
+        }
+
+        .hero-text {
+            width: 80%;
+            /* wider than desktop, narrower than mobile */
+            top: clamp(12vh, 20vh, 30vh);
+            /* moves text down consistently on tablets */
+            padding-block: 25px;
+            /* slightly smaller padding */
+            gap: 15px;
+            justify-content: space-around;
+
+            .desc p {
+                width: 80%;
+                /* tablet-friendly width */
+                font-size: 1.3em;
+            }
+
+            .hero-title h1 {
+                font-size: 2.3em;
+                /* smaller than desktop, larger than mobile */
+            }
+        }
+    }
+}
+
+@media (min-width: 750px) {
+
+    .hero {
+        width: 100%;
+
+        .hero-img {
+            width: 100%;
+            padding-inline: 2em;
+            /* smaller padding than desktop */
+
+            img {
+                width: 100%;
+                height: 32em;
+                /* reduce height slightly */
+                object-fit: cover;
+            }
+        }
+
+        .hero-text {
+            width: 80%;
+            /* wider than desktop, narrower than mobile */
+            top: clamp(12vh, 20vh, 30vh);
+            /* moves text down consistently on tablets */
+            padding-block: 25px;
+            /* slightly smaller padding */
+            gap: 15px;
+            justify-content: space-around;
+
+            .desc {
+
+                // flex-direction: column;
+                p {
+                    width: 70%;
+                    /* tablet-friendly width */
+                    font-size: 1.3em;
+                }
+            }
+
+            .hero-title h1 {
+                font-size: 2.3em;
+                /* smaller than desktop, larger than mobile */
+            }
+        }
+    }
+}

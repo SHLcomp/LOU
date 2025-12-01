@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  color: var(--text);
+  overflow-x: hidden;
+  /* background: linear-gradient(135deg, #E6E3F0 0%, #CAD2D3 100%); */
+  /* background: linear-gradient(135deg, #E6E3F0 0%, #CAD2D3 100%); */
+}
+
+/* fonts */
+@import url("https://fonts.cdnfonts.com/css/therilo");
+
+@font-face {
+  font-family: "exbed";
+  src: url("././fonts/Exbed.ttf");
+}
+/* shared styles */
+.a {
+  text-decoration: none;
+  color: var(--text);
+}
+.cta {
+  padding-block: 10px;
+  padding-inline: 20px;
+  border-radius: 10px;
+  background-color: var(--cta-bg2);
+  color: var(--text);
+  transition: 0.3s ease;
+  cursor: pointer;
+  filter: drop-shadow(3px 2px 1px var(--golden-glow));
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+.cta2 {
+  padding-block: 5px;
+  padding-inline: 10px;
+  border-radius: 10px;
+  /* background-color: var(--cta-bg2); */
+  color: var(--text);
+  transition: 0.3s ease;
+  cursor: pointer;
+  filter: drop-shadow(3px 2px 1px var(--silver-glow));
+  text-decoration: underline;
+}
+.colored-text {
+  background: var(--gradient-font-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  /* hide actual text color */
+  -webkit-text-fill-color: transparent;
+}
+.colored-text2 {
+  background: var(--gradient-font-color2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  /* hide actual text color */
+  -webkit-text-fill-color: transparent;
+}
+.silver-glow-text {
+  filter: drop-shadow(3px 2px 3px var(--silver-glow));
+}
+.golden-glow-text {
+  filter: drop-shadow(3px 2px 3px var(--golden-glow));
+}
+.silver-glow {
+  box-shadow: (3px 2px 3px var(--silver-glow));
+}
+.golden-glow {
+  box-shadow: (3px 2px 3px var(--golden-glow)) !important;
+}
+.secondary-text {
+  color: red;
+  font-family: "exbed";
+  font-size: 12px;
+}
+.des-text {
+  color: var(--text);
+  text-align: center;
+  padding-bottom: 2em;
+}
+.contact-orb1 {
+  background-image: url(./assets/marble.png);
+  z-index: 100;
+  position: relative;
+  top: 0;
+  width: 400px;
+  height: 400px;
+}
+.brand-name{
+  color: var(--accent-color);
+  filter: drop-shadow(1px 1px 1px var(--silver-glow));
+  font-family: 'exbed';
+  font-size: 12px;
+  position: relative;
+  /* font-weight: bolder; */
+  &:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 130%;
+    left: 0;
+    height: 2px;
+    background: var(--image-highlight);
+  }
+}
+
+/* variables */
+:root {
+  --navbar-bg: white;
+  --gradient-font-color: linear-gradient(90deg, #d4af37, #f8f8f8);
+  --gradient-font-color2: linear-gradient(90deg, #d4af37, #c0c0c0, #ffc671);
+  --cta-bg2: #c0c0c0; /*secondary and small highlights*/
+  --cta-bg: #d4af37; /*celestial gold*/
+  --hover: #d4af37;
+  --icons: #d4af37;
+  --main-color: linear-gradient(90deg, #1a1f36, white);
+  --second-color: #f5efeb;
+  --accent-color: #ffc671;
+  --main-bg-color: radial-gradient(circle, #f5efeb 0%, #2f4156 100%);
+
+  --secondary-bg-color: #cad2d3; /*0r#F2F2F4 #efece7 for more silvery color*/
+  --image-highlight: #ffc671;
+  --golden-glow: #d4af37;
+  --bgs-textH: #f8f8f8;
+  --text: #2e2e2e; /*dark but not harsh black*/
+  --text2: #c0c0c0; /*dark but not harsh black*/
+  --main-bg: #1a1f36;
+  --silver-glow: #c0c0c0;
+  --icons: #ffc671;
+  --shadow: #12122b;
+}

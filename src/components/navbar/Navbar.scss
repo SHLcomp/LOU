@@ -1,0 +1,134 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: clamp(auto, 10vh, 21vh);
+  padding-top: 20px;
+  z-index: 2000;
+
+  nav {
+    background: var(--navbar-bg);
+    width: clamp(50%, 80%, 90%);
+    height: clamp(auto, 10vh, 21vh);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-inline: 20px;
+    border-radius: 40px;
+    box-shadow: 2px 3px 2px var(--golden-glow);
+
+    h1 {
+      display: flex;
+      flex-direction: column;
+
+      span:nth-child(1) {
+        filter: drop-shadow(3px 2px 1px var(--silver-glow));
+        font-family: 'therilo';
+        font-size: clamp(20px, 2em, 55px);
+      }
+
+      span:nth-child(2) {
+        font-size: x-small;
+        color: black !important;
+        filter: none !important;
+        position: relative;
+        bottom: 20px;
+      }
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      gap: clamp(5px, 10px, 25px);
+      font-size: clamp(12px, 1.2em, 25px);
+
+      li {
+        cursor: pointer;
+        transition: 0.2s ease;
+        padding: 5px 10px;
+        border-radius: 30px;
+
+        &.chosen {
+          background: var(--accent-color);
+          color: var(--text);
+          filter: drop-shadow(1px 2px 2px var(--silver-glow));
+
+          &:hover {
+            color: black;
+          }
+        }
+
+        &:hover {
+          color: var(--accent-color);
+        }
+      }
+    }
+
+    .colored li {
+      padding: 5px 20px;
+      border-radius: 50px;
+      border: solid 1px gray;
+
+      &:nth-child(2) {
+        background: var(--cta-bg);
+        color: white;
+      }
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .nav nav {
+    flex-direction: column;
+    width: clamp(300px, 90%, 600px);
+    height: clamp(300px, auto, 90%);
+    border-radius: 20px;
+    box-shadow: 2px 3px 2px black;
+    transition: 0.5s ease;
+
+    ul {
+      display: none;
+      flex-direction: column;
+      padding-block: 20px;
+      opacity: 0;
+      transition: 0.8s ease;
+
+      &.active {
+        display: flex;
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+  }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .nav nav {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    height: auto;
+    padding: 1em 1.5em;
+    border-radius: 30px;
+    box-shadow: 2px 3px 2px black;
+
+    ul {
+      display: flex;
+      gap: 15px;
+      font-size: 1em;
+    }
+
+    h1 {
+      font-size: clamp(1.5em, 2vw, 2.5em);
+    }
+  }
+}
