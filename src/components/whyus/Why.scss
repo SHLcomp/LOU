@@ -256,7 +256,7 @@
 
                     .info-item {
                         width: 100%;
-                        height: clamp(160px, 10vh, 30vh);
+                        height: clamp(160px, 12vh + 5em, 30vh); // was (160px, 10vh, 30vh)
                         padding-block: 10px;
                     }
                 }
