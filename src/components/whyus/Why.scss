@@ -157,12 +157,10 @@
 }
 
 @keyframes imagePop {
-    from {
-        transform: scale(.9);
-    }
-
+    
     to {
         transform: scale(1);
+        opacity: 1;
     }
 }
 @keyframes rightScale {
