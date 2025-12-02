@@ -20,6 +20,7 @@ export const Hero = () => {
   gsap.from(chars, {
     yPercent: 100,
     stagger: 0.009,
+    duration: 1.2,
     ease: "expo.out",
   })
 
