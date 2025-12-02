@@ -129,15 +129,18 @@ body {
 
         .hero-title {
             font-family: 'exbed';
+            width: 70%;
             filter: drop-shadow(3px 2px 1px var(--golden-glow));
 
             h1 {
                 font-size: 3em;
-                width: 80%;
+                width: auto;
 
-                // animation-name: title;
-                // animation-duration: 5s;
-                // animation-fill-mode: forwards;
+                white-space: normal !important;
+                word-break: keep-all !important;
+                /* ← DO NOT split words */
+                overflow-wrap: normal !important;
+                hyphens: none !important;
             }
         }
     }
@@ -205,7 +208,7 @@ body {
             inset 0 0 12px rgba(255, 255, 255, 0.25);
         animation: orbFloat 3s ease-in-out infinite;
 
-        
+
         -webkit-tap-highlight-color: transparent;
         /* removes blue box on mobile */
         user-select: none;
