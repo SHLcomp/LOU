@@ -12,13 +12,28 @@ export const Hero = () => {
   useEffect(() => {
     
   let split = new SplitText(".split", { type: "chars" });
+  let split2 = new SplitText(".split2", { type: "lines" });
   let chars = split.chars;
+  let lines = split2.lines
+
 
   gsap.from(chars, {
-    yPercent: 130,
+    yPercent: 100,
     stagger: 0.009,
-    ease: "power4.out",
-  });
+    ease: "expo.out",
+  })
+
+   gsap.from(lines, {
+    opacity: 0,
+    yPercent: 100,
+    duration:1.8,
+    stagger: 0.009,
+    ease: "expo.out",
+    delay: .5
+
+  })
+
+
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -47,7 +62,7 @@ export const Hero = () => {
       </div>
       <div className="hero-text">
         <div className="desc" ref={descRef}>
-          <p>
+          <p className="split2">
             Light of the Universe crafts extraordinary experiences through
             innovation, elegance, and attention to detail. We design
             transformative events, concepts, and environments that reflect
