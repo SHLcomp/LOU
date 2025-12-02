@@ -1,10 +1,26 @@
 import React from "react";
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
+import Filter from "../filter/Filter";
 import data from "../../data/casestudies";
+import { useState } from "react";
 import "./CaseStudies.scss";
 
 const CaseStudies = () => {
+  // Take only 4 items
+//   const limitedData = data.slice(3, 7);
+
+  const [items, setItems] = useState(data);
+  const filterItems = [...new Set(data.map((value) => value.cat))];
+  // Filtering function
+  const handleFilter = (category) => {
+    if (category === "all") {
+      setItems(data);
+    } else {
+      const newItems = data.filter((item) => item.cat === category);
+      setItems(newItems);
+    }
+  };
   return (
     <div>
       <Navbar />
@@ -23,8 +39,11 @@ const CaseStudies = () => {
             Vitae, quasi.
           </p>
         </div>
+        <div className="filter">
+          <Filter filterItems={filterItems} onFilter={handleFilter} />
+        </div>
         <div className="cards">
-          {data.map((proj) => {
+          {items.map((proj) => {
             return (
               <div
                 className="card golden-glow-text"
