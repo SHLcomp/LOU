@@ -115,7 +115,7 @@ body {
     }
 
     .contact-orb {
-        position: absolute;
+        position: fixed !important;
         right: 4vw;
         bottom: 10vh;
         z-index: 999;
@@ -153,6 +153,7 @@ body {
             width: clamp(100px, 12vw, 200px);
             list-style: none;
             flex-direction: column;
+            pointer-events: none;
         }
 
     }
