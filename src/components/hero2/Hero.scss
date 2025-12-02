@@ -52,6 +52,25 @@ body {
         }
     }
 
+    .info {
+        display: flex;
+        justify-content: space-around;
+        z-index: 700 !important;
+        margin-top: 42vh;
+        color: var(--text2);
+
+        p {
+            display: flex;
+            flex-direction: column-reverse;
+            margin-top: 30px;
+
+            span {
+                font-weight: 800;
+                font-size: 1.5em;
+            }
+        }
+    }
+
     .hero-text {
         position: relative;
         z-index: 10;
@@ -99,6 +118,8 @@ body {
                 }
             }
         }
+
+
 
         .hero-title {
             font-family: 'exbed';
@@ -285,6 +306,7 @@ body {
         letter-spacing: 2px;
     }
 }
+
 @keyframes Mtitle {
     from {}
 

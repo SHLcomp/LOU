@@ -30,6 +30,7 @@ export const Hero = () => {
         <img className="globe" src={globe} alt="" />
       </div>
       <div className="hero-text">
+        
         <div className="desc" ref={descRef}>
           <p>
             Light of the Universe crafts extraordinary experiences through
@@ -50,17 +51,36 @@ export const Hero = () => {
             Your ideas. Our light. Universal impact.
           </h1>
         </div>
+        
       </div>
 
-      <div className="contact-orb silver-glow-text" style={{ backgroundImage: `url(${marble})` }}>
+      <div
+        className="contact-orb silver-glow-text"
+        style={{ backgroundImage: `url(${marble})` }}
+      >
         <ul>
           <li>
             <i className="fa-solid fa-phone"></i> +962 071234567
           </li>
-          <li><i className="fa-solid fa-envelope"></i> email@LOU.com</li>
+          <li>
+            <i className="fa-solid fa-envelope"></i> email@LOU.com
+          </li>
           <h3 className="cta">Contact</h3>
         </ul>
       </div>
+
+      
+      <div className="info">
+          <p>
+             Completed Project <span>500+</span>
+          </p>
+          <p>
+             Years of Expertise <span>15+</span>
+          </p>
+          <p>
+            Satisfaction  <span>100%</span>
+          </p>
+        </div>
     </div>
   );
 };
