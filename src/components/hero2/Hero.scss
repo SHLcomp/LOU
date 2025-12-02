@@ -18,9 +18,11 @@ body {
     border-bottom-right-radius: 40px;
     background-image: url("https://cdn.pixabay.com/photo/2017/03/27/14/31/stars-2179083_1280.jpg");
 
-     -webkit-mask-image: linear-gradient(180deg, #000, 90%, rgba(0, 0, 0, 0.707));  /* fading effect */
-    mask-image: linear-gradient(180deg, #000, 90%, rgba(0, 0, 0, 0.707));  /* fading effect */
-    
+    -webkit-mask-image: linear-gradient(180deg, #000, 90%, rgba(0, 0, 0, 0.707));
+    /* fading effect */
+    mask-image: linear-gradient(180deg, #000, 90%, rgba(0, 0, 0, 0.707));
+    /* fading effect */
+
 
     // background-repeat: no-repeat;
     .hero-imgs {
