@@ -57,7 +57,7 @@ export const Hero = () => {
           <li>
             <i className="fa-solid fa-phone"></i> +962 071234567
           </li>
-          <li><i className="fa-solid fa-envelope"></i> email@adress.com</li>
+          <li><i className="fa-solid fa-envelope"></i> email@LOU.com</li>
           <h3 className="cta">Contact</h3>
         </ul>
       </div>
