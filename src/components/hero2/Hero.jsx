@@ -5,7 +5,8 @@ import marble from "../../assets/marble.png";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 
-gsap.registerPlugin(SplitText);
+// gsap.registerPlugin(SplitText);
+
 export const Hero = () => {
   const descRef = useRef(null); // ref for description
 

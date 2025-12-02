@@ -1,9 +1,16 @@
 import React, { useEffect, useRef } from "react";
 import "./Services.scss";
 import data from "../../data/services";
-// import img from '../../assets/bg1.jpg'
+
+
+
 
 export const Services = () => {
+
+
+
+
+
   const itemsRef = useRef([]);
   const headerRef = useRef(null); // <- h1 ref
   const subheaderRef = useRef(null);
@@ -12,6 +19,9 @@ export const Services = () => {
   itemsRef.current.length = data.length;
 
   useEffect(() => {
+
+
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -63,7 +73,7 @@ export const Services = () => {
           {data.map((service, i) => {
             return (
               <div
-                className="card"
+                className="card moveCard"
                 key={i}
                 ref={(el) => (itemsRef.current[i] = el)}
               >
