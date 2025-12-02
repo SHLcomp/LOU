@@ -117,27 +117,29 @@
 
 /* Tablet */
 @media (min-width: 601px) and (max-width: 1024px) {
-  .nav nav {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 90%;
-    height: auto;
-    padding: 1em 1.5em;
-    border-radius: 30px;
-    box-shadow: 2px 3px 2px black;
+  .nav {
+    nav {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 90%;
+      height: auto;
+      padding: 1em 1.5em;
+      border-radius: 30px;
+      box-shadow: 2px 3px 2px black;
 
-    ul {
-      display: flex;
-      gap: 15px;
-      font-size: 1em;
-    }
+      ul {
+        display: flex;
+        gap: 15px;
+        font-size: 1em;
+      }
 
-    h1 {
-      font-size: clamp(1.5em, 2vw, 2.5em);
+      h1 {
+        font-size: clamp(1.5em, 2vw, 2.5em);
 
-      span:nth-child(2) {
-        width: 60%;
-        font-size: 8px;
+        span:nth-child(2) {
+          width: 60%;
+          font-size: 8px;
+        }
       }
     }
   }
