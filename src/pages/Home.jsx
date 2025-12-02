@@ -5,6 +5,8 @@ import { Services } from '../components/services/Services'
 import Projects from '../components/projects/Projects'
 import Why from '../components/whyus/Why'
 import ShortAU from '../components/shortAU/ShortAU'
+import ContactForm from '../components/contactForm/ContactForm'
+import ContactInfo from '../components/ContactInfo/ContactInfo'
 import Footer from '../components/footer/Footer'
 
 export const Home = () => {
@@ -16,6 +18,8 @@ export const Home = () => {
         <Services />
         <Why />
         <Projects />
+        <ContactForm />
+        <ContactInfo/>
         <Footer />
     </div>
   )

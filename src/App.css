@@ -94,7 +94,7 @@ body {
   height: 400px;
 }
 .brand-name{
-  color: var(--accent-color);
+  /* color: var(--accent-color); */
   filter: drop-shadow(1px 1px 1px var(--silver-glow));
   font-family: 'exbed';
   font-size: 12px;
