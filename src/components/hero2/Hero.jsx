@@ -1,15 +1,19 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Hero.scss";
 import globe from "../../assets/earth.png";
 import marble from "../../assets/marble.png";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 
-// gsap.registerPlugin(SplitText);
+
 
 export const Hero = () => {
-  const descRef = useRef(null); // ref for description
+  const [orbOpen, setOrbOpen] = useState(false);
 
+
+
+
+  const descRef = useRef(null); // ref for description
   useEffect(() => {
     
   let split = new SplitText(".split", { type: "chars" });
@@ -86,8 +90,9 @@ export const Hero = () => {
       </div>
 
       <div
-        className="contact-orb silver-glow-text"
+        className={`contact-orb silver-glow-text ${orbOpen ? "open" : ""}`}
         style={{ backgroundImage: `url(${marble})` }}
+        onClick={() => setOrbOpen(!orbOpen)}
       >
         <ul>
           <li>
