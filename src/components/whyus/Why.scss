@@ -124,6 +124,7 @@
                 object-fit: cover;
                 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
                 transform: scale(.9);
+                opacity: .4;
 
                 &.move-up {
                     transform: scale(.9);
