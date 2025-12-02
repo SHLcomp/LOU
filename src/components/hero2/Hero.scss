@@ -285,6 +285,14 @@ body {
         letter-spacing: 2px;
     }
 }
+@keyframes Mtitle {
+    from {}
+
+    to {
+        word-spacing: 1px;
+        letter-spacing: 2px;
+    }
+}
 
 @keyframes headerDes {
     from {
@@ -344,6 +352,12 @@ body {
                 p {
                     color: white;
                     filter: drop-shadow(1px 1px 2px black);
+                }
+
+                h1 {
+                    animation-name: Mtitle;
+                    animation-duration: 5s;
+                    animation-fill-mode: forwards;
                 }
 
                 .hero-cta {
