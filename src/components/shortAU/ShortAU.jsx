@@ -44,13 +44,17 @@ export const ShortAU = () => {
           />
         </div>
         <div className="text">
-        
-          <h2 className="golden-glow-text" ref={headerRef}><span className="secondary-text">About LOU</span> Our Business Culture</h2>
+          <h2 className="golden-glow-text" ref={headerRef}>
+            <span className="secondary-text">About LOU</span> Our Business
+            Culture
+          </h2>
           <h5 ref={subheaderRef}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-            delectus, voluptates nemo, labore magni non eveniet voluptatum
-            distinctio temporibus minima, ipsa ab molestias repellat ea
-            perspiciatis beatae incidunt neque fugiat.
+            We guide clients through high-stakes decisions and transformative
+            moments so they can adapt, grow, and thrive. Our edge? The power of
+            perspective — driven by deep industry insight, specialized
+            expertise, and a spirit of true collaboration.
+            <br />
+            Your organization is full of potential, we're here to unleash it!
           </h5>
         </div>
       </div>

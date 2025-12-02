@@ -1,9 +1,3 @@
-// import img1 from '../assets/bg2.jpg';
-import img2 from '../assets/bg5.jpg';
-import img3 from '../assets/bg3.jpg';
-// import img4 from 'https://images.pexels.com/photos/1045541/pexels-photo-1045541.jpeg';
-// import img5 from '../assets/bg1.jpg';
-
 const data = [
     {
         name: "Concept & Creative Direction",
