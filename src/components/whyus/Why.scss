@@ -123,10 +123,10 @@
                 border-radius: 16px;
                 object-fit: cover;
                 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-                transform: scale(.3);
+                transform: scale(.9);
 
                 &.move-up {
-                    transform: scale(.3);
+                    transform: scale(.9);
                     &.pop {
                     transform: translateY(-25px);
                     animation-name: imagePop;
@@ -136,7 +136,7 @@
                 }
 
                 &.move-down {
-                    transform: scale(.3);
+                    transform: scale(.9);
                     &.pop {
                     animation-name: imagePop;
                     animation-duration: 1s;
@@ -157,7 +157,7 @@
 
 @keyframes imagePop {
     from {
-        transform: scale(.3);
+        transform: scale(.9);
     }
 
     to {
