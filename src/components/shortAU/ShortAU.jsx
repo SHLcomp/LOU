@@ -55,6 +55,12 @@ export const ShortAU = () => {
             expertise, and a spirit of true collaboration.
             <br />
             Your organization is full of potential, we're here to unleash it!
+            <br />
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+            repellat quo sapiente molestias esse. Aliquid iste facilis excepturi
+            recusandae libero animi tempora quis aliquam, consequatur quisquam
+            dolore similique fugiat nam.
           </h5>
         </div>
       </div>
