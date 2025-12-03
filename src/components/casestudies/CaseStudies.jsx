@@ -47,7 +47,9 @@ const CaseStudies = () => {
         <div className="cards">
           {items.map((proj) => {
             return (
-              <div
+                // to fix the image border and overflow / ::after problem 
+              <div className="card-wrapper"> 
+                <div
                 className="card golden-glow-text"
                 data-text={proj.cat}
                 style={{
@@ -68,6 +70,7 @@ const CaseStudies = () => {
                 >
                   <img src={proj.img} alt="" />
                 </div>
+              </div>
               </div>
             );
           })}

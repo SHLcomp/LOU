@@ -132,7 +132,9 @@
       ul {
         display: flex;
         gap: 15px;
-        font-size: 1em;
+        font-size: 15px;
+        gap: 0 !important;
+        justify-content: center !important;
       }
 
       h1 {
