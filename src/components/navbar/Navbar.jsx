@@ -16,6 +16,9 @@ export const Navbar = () => {
       case "/services":
         setMenu("Services");
         break;
+      case "/resources":
+        setMenu("Resources");
+        break;
       case "/casestudies":
         setMenu("Case Studies");
         break;
@@ -50,7 +53,7 @@ export const Navbar = () => {
           </Link>
 
           <Link className="a" to={"/services"}><li className={menu === "Services" ? "chosen" : ""}>Services</li></Link>
-          <Link className="a" to={"/sesources"}><li className={menu === "Resources" ? "chosen" : ""}>Resources</li></Link>
+          <Link className="a" to={"/resources"}><li className={menu === "Resources" ? "chosen" : ""}>Resources</li></Link>
           <Link className="a" to={"/casestudies"}><li className={menu === "Case Studies" ? "chosen" : ""}>Case Studies</li></Link>
           <Link className="a" to={'/about'}><li className={menu === "About Us" ? "chosen" : ""}>About Us</li></Link>
         </ul>
