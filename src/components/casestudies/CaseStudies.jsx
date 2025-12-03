@@ -5,6 +5,7 @@ import Filter from "../filter/Filter";
 import data from "../../data/casestudies";
 import { useState } from "react";
 import "./CaseStudies.scss";
+import Orb from "../orb/Orb";
 
 const CaseStudies = () => {
   // Take only 4 items
@@ -24,6 +25,7 @@ const CaseStudies = () => {
   return (
     <div>
       <Navbar />
+      <Orb/>
       <section className="casestudies">
         <div className="header">
           <h1>Projects We Have Done</h1>

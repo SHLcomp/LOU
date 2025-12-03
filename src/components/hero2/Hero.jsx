@@ -1,16 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "./Hero.scss";
 import globe from "../../assets/earth.png";
-import marble from "../../assets/marble.png";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
+import Orb from "../orb/Orb";
 
 
 
 export const Hero = () => {
-  const [orbOpen, setOrbOpen] = useState(false);
-
-
 
 
   const descRef = useRef(null); // ref for description
@@ -89,21 +86,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div
-        className={`contact-orb silver-glow-text ${orbOpen ? "open" : ""}`}
-        style={{ backgroundImage: `url(${marble})` }}
-        onClick={() => setOrbOpen(!orbOpen)}
-      >
-        <ul>
-          <li>
-            <i className="fa-solid fa-phone"></i> +962 071234567
-          </li>
-          <li>
-            <i className="fa-solid fa-envelope"></i> email@LOU.com
-          </li>
-          <h3 className="cta">Contact</h3>
-        </ul>
-      </div>
+     <Orb />
 
       <div className="info">
         <p>
